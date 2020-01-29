@@ -1,0 +1,186 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  
+  "scenarios": [
+    {
+      "onReadyScript": "puppet/onReady.js",
+      "label": "FM Login Page",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.8,
+      "requireSameDimensions": true
+    },
+
+    {
+      "onReadyScript": "puppet/onReady.js",
+      "label": "FM Login Page Forgot Password",
+      "postInteractionWaitSelectors" : "#forgotPassword",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "#forgotPasswordModal",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.8,
+      "requireSameDimensions": true
+    },
+    {
+      "onReadyScript": "puppet/onReady.js",
+      "label": "FM Login Page Register",
+      "postInteractionWaitSelectors" : "#registerPasswordConfirm",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "#registerModal",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.8,
+      "requireSameDimensions": true
+    },
+    {
+      "onReadyScript": "puppet/customData/homePageDirectoryOnlyOnReady.js",
+      "label": "FM Login Home Page Directory Test",
+      "keyPressSelectors": [
+        {
+          "selector": "#email",
+          "keyPress": "chhibber.saransh@gmail.com"
+        },
+        {
+          "selector": "#password",
+          "keyPress": "test12"
+        }
+      ],
+      "postInteractionWaitSelectors" : "#submitCreateDirectory",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "#loginSubmit",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "onReadyScript": "puppet/customData/homePageFileOnlyOnReady.js",
+      "label": "FM Login Home Page File Test",
+      "keyPressSelectors": [
+        {
+          "selector": "#email",
+          "keyPress": "chhibber.saransh@gmail.com"
+        },
+        {
+          "selector": "#password",
+          "keyPress": "test12"
+        }
+      ],
+      "postInteractionWaitSelectors" : "#submitCreateDirectory",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "#loginSubmit",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "onReadyScript": "puppet/customData/homePageCreateDirectoryOnReady.js",
+      "label": "FM Login Home Page Create Directory",
+      "keyPressSelectors": [
+        {
+          "selector": "#email",
+          "keyPress": "chhibber.saransh@gmail.com"
+        },
+        {
+          "selector": "#password",
+          "keyPress": "test12"
+        }
+      ],
+      "postInteractionWaitSelectors" : "#submitCreateDirectory",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "http://localhost:8080/#/",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "#email",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "#loginSubmit",
+      "postInteractionWait": 10,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

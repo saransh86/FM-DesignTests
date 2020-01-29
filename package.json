@@ -1,0 +1,14 @@
+{
+  "name": "FM-Design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./backstop_data/bitmaps_test/*",
+    "test": "./node_modules/.bin/backstop test"
+  },
+  "dependencies": {
+    "backstopjs": "^4.4.2",
+    "global": "^4.4.0"
+  }
+}
